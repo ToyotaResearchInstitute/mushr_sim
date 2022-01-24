@@ -2,5 +2,6 @@
 <launch>
     <rosparam command="load" file="$(find mushr_sim)/config/keyboard_teleop.yaml" />
 
+    <remap from="/mux/ackermann_cmd_mux/input/teleop" to="/mushr_mujoco_ros/buddy/control" />
     <node pkg="mushr_sim" type="keyboard_teleop.py" name="keyboard_teleop" />
 </launch>
